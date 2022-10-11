@@ -1,0 +1,7 @@
+libjson-xs-perl (4.020-1) unstable; urgency=medium
+
+  * Security implication: this release enables allow_nonref by default
+    for compatibility with RFC 7159 and newer. See "old" vs. "new"
+    JSON under SECURITY CONSIDERATIONS in JSON::XS POD.
+
+ -- intrigeri <intrigeri@debian.org>  Sun, 21 Jul 2019 15:13:24 +0000

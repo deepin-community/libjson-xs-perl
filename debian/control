@@ -1,0 +1,38 @@
+Source: libjson-xs-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Angel Abad <angel@debian.org>,
+           Ivan Kohler <ivan-debian@420.am>,
+           Niko Tyni <ntyni@debian.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               libcanary-stability-perl,
+               libcommon-sense-perl <!nocheck>,
+               libtypes-serialiser-perl <!nocheck>,
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libjson-xs-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libjson-xs-perl.git
+Homepage: https://metacpan.org/release/JSON-XS
+Rules-Requires-Root: no
+
+Package: libjson-xs-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libcommon-sense-perl,
+         libtypes-serialiser-perl
+Breaks: libjson-perl (<< 2.90)
+Description: module for manipulating JSON-formatted data (C/XS-accelerated)
+ JSON::XS is a module for manipulating data stored in the JavaScript Object
+ Notation (JSON) serialization format (defined in RFC 4627), which serves as
+ an alternative to XML.
+ .
+ This C/XS-accelerated JSON implementation confers significant performance
+ gains if available. After installing this package, any code using the JSON
+ module (see libjson-perl) will automagically benefit from this.

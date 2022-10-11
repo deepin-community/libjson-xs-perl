@@ -1,0 +1,19 @@
+Description: fix spelling
+Origin: vendor
+Bug: https://rt.cpan.org/Ticket/Display.html?id=117976
+Forwarded: https://rt.cpan.org/Ticket/Display.html?id=117976
+Author: Nuno Carvalho <smash@cpan.org>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2018-11-26
+
+--- a/XS.pm
++++ b/XS.pm
+@@ -1680,7 +1680,7 @@
+ 
+ C<JSON::XS> uses the L<Types::Serialiser> module to provide boolean
+ constants. That means that the JSON true and false values will be
+-comaptible to true and false values of other modules that do the same,
++compatible to true and false values of other modules that do the same,
+ such as L<JSON::PP> and L<CBOR::XS>.
+ 
+ 
